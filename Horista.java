@@ -20,10 +20,15 @@ public class Horista extends Funcionario {
     }
     @Override
      public void exibirDados(){
-        System.out.println("-- DADOS DO FUNCIONARIO --");
-        System.out.println("Nome do funcionario: "+this.nome);
-        System.out.println("Matricula: "+ this.matricula);
-        System.out.println("Pagamento do Horista: "+ calcularPagamento() );
+       System.out.println("-- DADOS DO FUNCIONARIO --");
+        System.out.println("Nome do funcionario: " + this.nome);
+        System.out.println("Matricula: " + this.matricula);
+        if (horasTrabalhadas < 0 || valorHora < 0) {
+            System.out.println("Horas tabalhadas ou valor da hora invalido");
+        } else {
+            System.out.println("Pagamento do Horista: " + calcularPagamento());
+
+        }
         
     }
 }
