@@ -24,9 +24,14 @@ public class Assalariado extends Funcionario{
     }
      @Override
      public void exibirDados(){
-        System.out.println("-- DADOS DO FUNCIONARIO --");
-        System.out.println("Nome do funcionario: "+this.nome);
-        System.out.println("Matricula: "+ this.matricula);
-        System.out.println("Salario mensal "+ calcularPagamento() );
+       System.out.println("-- DADOS DO FUNCIONARIO --");
+        System.out.println("Nome do funcionario: " + this.nome);
+        System.out.println("Matricula: " + this.matricula);
+        if (salarioMensal < 0) {
+            System.out.println("salario invalido");
+        } else {
+            System.out.println("Salario mensal " + calcularPagamento());
+
+        }
     }
 }
