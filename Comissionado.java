@@ -27,9 +27,13 @@ public class Comissionado extends Funcionario {
     @Override
     public void exibirDados(){
         System.out.println("-- DADOS DO FUNCIONARIO --");
-         System.out.println("Nome do funcionario: "+this.nome);
-        System.out.println("matricula: "+ this.matricula);
-        System.out.println("salario comissionado: "+ calcularPagamento() );
+        System.out.println("Nome do funcionario: " + this.nome);
+        System.out.println("matricula: " + this.matricula);
+        if (percentualComissao < 0 || totalVendas < 0) {
+            System.out.println("percentual Comissao ou total de vendas invalido!");
+        } else {
+            System.out.println("salario comissionado: " + calcularPagamento());
+        }
     }
     
 }
